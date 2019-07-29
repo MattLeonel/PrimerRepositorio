@@ -12,11 +12,12 @@ import java.util.ArrayList;
  * @author Punto Digital
  */
 public class GestorDePaquetesDeProyectores {
+
     private ArrayList<PaqueteDeProyectores> paquetes;
     private String nombreEmpresa;
-    
-    public GestorDePaquetesDeProyectores(String nombre){
-        
+
+    public GestorDePaquetesDeProyectores(String nombre) {
+        paquetes = new ArrayList<>();
         this.nombreEmpresa = nombre;
     }
 
@@ -27,9 +28,18 @@ public class GestorDePaquetesDeProyectores {
     public void setNombreEmpresa(String nombre) {
         this.nombreEmpresa = nombre;
     }
-    
-    public void agregarPaquete(PaqueteDeProyectores paqueteNuevo){
-    
-    
+
+    public void agregarPaquete(PaqueteDeProyectores paqueteNuevo) {
+
+    }
+
+    int buscarPaqueteDeProyectores(int codPaq) {
+        for (int i = 0; i <= paquetes.size(); i++) {
+            if (paquetes.get(i).getCodPaquete() == codPaq) {
+                return paquetes.get(i).getCodPaquete();
+            }
+        }
+        return 0;
+
     }
 }
