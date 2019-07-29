@@ -33,13 +33,13 @@ public class GestorDePaquetesDeProyectores {
 
     }
 
-    int buscarPaqueteDeProyectores(int codPaq) {
+    PaqueteDeProyectores buscarPaqueteDeProyectores(int codPaq) {
         for (int i = 0; i <= paquetes.size(); i++) {
             if (paquetes.get(i).getCodPaquete() == codPaq) {
-                return paquetes.get(i).getCodPaquete();
+                return paquetes.get(i);
             }
         }
-        return 0;
+        return null;
 
     }
 }
